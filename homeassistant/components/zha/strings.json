@@ -1139,7 +1139,12 @@
         "name": "Actuator type"
       },
       "adaptation_run_command": {
-        "name": "Adaptation run command"
+        "name": "Adaptation run command",
+        "state": {
+          "cancel": "Cancel",
+          "initiate": "Initiate",
+          "nothing": "Nothing"
+        }
       },
       "alarm_mode": {
         "name": "Alarm mode"
@@ -1157,7 +1162,12 @@
         "name": "Alarm volume"
       },
       "approach_distance": {
-        "name": "Approach distance"
+        "name": "Approach distance",
+        "state": {
+          "far": "Far",
+          "medium": "Medium",
+          "near": "Near"
+        }
       },
       "audio": {
         "name": "Audio"
@@ -1169,7 +1179,13 @@
         "name": "Audio sensitivity"
       },
       "backlight_mode": {
-        "name": "Backlight mode"
+        "name": "Backlight mode",
+        "state": {
+          "freeze": "Freeze",
+          "lightwhenoff": "Light when off",
+          "lightwhenon": "Light when on",
+          "off": "Off"
+        }
       },
       "breaker_mode": {
         "name": "Breaker mode"
@@ -1187,7 +1203,11 @@
         "name": "Click mode"
       },
       "color_temperature_channel": {
-        "name": "Color temperature channel"
+        "name": "Color temperature channel",
+        "state": {
+          "cool_white": "Cool white",
+          "warm_white": "Warm white"
+        }
       },
       "control_type": {
         "name": "Control type"
@@ -1196,28 +1216,67 @@
         "name": "Control sequence"
       },
       "decoupled_mode": {
-        "name": "Decoupled mode"
+        "name": "Decoupled mode",
+        "state": {
+          "controlrelay": "Control relay",
+          "decoupled": "Decoupled"
+        }
       },
       "default_siren_level": {
-        "name": "Default siren level"
+        "name": "Default siren level",
+        "state": {
+          "high_level_sound": "High level sound",
+          "low_level_sound": "Low level sound",
+          "medium_level_sound": "Medium level sound",
+          "very_high_level_sound": "Very high level sound"
+        }
       },
       "default_siren_tone": {
-        "name": "Default siren tone"
+        "name": "Default siren tone",
+        "state": {
+          "burglar": "Burglar",
+          "emergency": "Emergency",
+          "emergency_panic": "Emergency panic",
+          "fire": "Fire",
+          "fire_panic": "Fire panic",
+          "police_panic": "Police panic",
+          "stop": "Stop"
+        }
       },
       "default_strobe": {
-        "name": "Default strobe"
+        "name": "Default strobe",
+        "state": {
+          "no_strobe": "No strobe",
+          "strobe": "Strobe"
+        }
       },
       "default_strobe_level": {
-        "name": "Default strobe level"
+        "name": "Default strobe level",
+        "state": {
+          "high_level_strobe": "High level strobe",
+          "low_level_strobe": "Low level strobe",
+          "medium_level_strobe": "Medium level strobe",
+          "very_high_level_strobe": "Very high level strobe"
+        }
       },
       "detach_relay": {
         "name": "Detach relay"
       },
       "detection_distance": {
-        "name": "Detection distance"
+        "name": "Detection distance",
+        "state": {
+          "tenmillimeters": "Ten millimeters",
+          "thirtymillimeters": "Thirty millimeters",
+          "twentymillimeters": "Twenty millimeters"
+        }
       },
       "detection_sensitivity": {
-        "name": "Detection sensitivity"
+        "name": "Detection sensitivity",
+        "state": {
+          "high": "High",
+          "low": "Low",
+          "medium": "Medium"
+        }
       },
       "device_mode": {
         "name": "Device mode"
@@ -1238,7 +1297,17 @@
         "name": "Eco mode"
       },
       "exercise_day_of_week": {
-        "name": "Exercise day of the week"
+        "name": "Exercise day of the week",
+        "state": {
+          "friday": "Friday",
+          "monday": "Monday",
+          "saturday": "Saturday",
+          "sunday": "Sunday",
+          "thursday": "Thursday",
+          "tuesday": "Tuesday",
+          "undefined": "Undefined",
+          "wednesday": "Wednesday"
+        }
       },
       "external_switch_type": {
         "name": "External switch type"
@@ -1253,7 +1322,11 @@
         "name": "Fading time"
       },
       "feeding_mode": {
-        "name": "Mode"
+        "name": "Mode",
+        "state": {
+          "manual": "Manual",
+          "schedule": "Schedule"
+        }
       },
       "heat_transfer_medium": {
         "name": "Heat transfer medium"
@@ -1271,7 +1344,11 @@
         "name": "Hysteresis mode"
       },
       "increased_non_neutral_output": {
-        "name": "Increased non-neutral output"
+        "name": "Increased non-neutral output",
+        "state": {
+          "high": "High",
+          "low": "Low"
+        }
       },
       "input_mode": {
         "name": "Input mode"
@@ -1283,16 +1360,31 @@
         "name": "Irrigation mode"
       },
       "keypad_lockout": {
-        "name": "Keypad lockout"
+        "name": "Keypad lockout",
+        "state": {
+          "lock1": "Lock1",
+          "lock2": "Lock2",
+          "lock3": "Lock3",
+          "lock4": "Lock4",
+          "unlock": "Unlock"
+        }
       },
       "leading_or_trailing_edge": {
-        "name": "Dimming mode"
+        "name": "Dimming mode",
+        "state": {
+          "leadingedge": "Leading edge",
+          "trailingedge": "Trailing edge"
+        }
       },
       "led_brightness": {
         "name": "LED brightness"
       },
       "led_scaling_mode": {
-        "name": "LED scaling mode"
+        "name": "LED scaling mode",
+        "state": {
+          "lzw31sn": "Lzw31sn",
+          "vzm31sn": "Vzm31sn"
+        }
       },
       "liquid_state": {
         "name": "Liquid state"
@@ -1307,13 +1399,24 @@
         "name": "Mode switch"
       },
       "monitoring_mode": {
-        "name": "Monitoring mode"
+        "name": "Monitoring mode",
+        "state": {
+          "left_right": "Left right",
+          "undirected": "Undirected"
+        }
       },
       "motion_detection_mode": {
         "name": "Motion detection mode"
       },
       "motion_sensitivity": {
-        "name": "Motion sensitivity"
+        "name": "Motion sensitivity",
+        "state": {
+          "high": "High",
+          "highest": "Highest",
+          "low": "Low",
+          "lowest": "Lowest",
+          "medium": "Medium"
+        }
       },
       "motion_state": {
         "name": "Motion state"
@@ -1325,10 +1428,24 @@
         "name": "Motor thrust"
       },
       "off_led_color": {
-        "name": "Off LED color"
+        "name": "Off LED color",
+        "state": {
+          "amber": "Amber",
+          "blue": "Blue",
+          "fushia": "Fushia",
+          "lim": "Lim",
+          "perle": "Perle"
+        }
       },
       "on_led_color": {
-        "name": "On LED color"
+        "name": "On LED color",
+        "state": {
+          "amber": "Amber",
+          "blue": "Blue",
+          "fushia": "Fushia",
+          "lim": "Lim",
+          "perle": "Perle"
+        }
       },
       "operating_mode": {
         "name": "Operating mode"
@@ -1337,7 +1454,11 @@
         "name": "Operation mode"
       },
       "output_mode": {
-        "name": "Output mode"
+        "name": "Output mode",
+        "state": {
+          "dimmer": "Dimmer",
+          "onoff": "On off"
+        }
       },
       "phase": {
         "name": "Phase"
@@ -1349,13 +1470,23 @@
         "name": "Pilot wire mode"
       },
       "power_on_state": {
-        "name": "Power on state"
+        "name": "Power on state",
+        "state": {
+          "laststate": "Last state",
+          "off": "Off",
+          "on": "On"
+        }
       },
       "presence_sensitivity": {
         "name": "Presence sensitivity"
       },
       "preset": {
-        "name": "Preset"
+        "name": "Preset",
+        "state": {
+          "auto": "Auto",
+          "away": "Away",
+          "manual": "Manual"
+        }
       },
       "preset_mode": {
         "name": "Preset mode"
@@ -1376,16 +1507,49 @@
         "name": "Sensor mode"
       },
       "setpoint_response_time": {
-        "name": "Setpoint response time"
+        "name": "Setpoint response time",
+        "state": {
+          "moderate_30min": "Moderate 30min",
+          "moderate_40min": "Moderate 40min",
+          "moderate_50min": "Moderate 50min",
+          "moderate_60min": "Moderate 60min",
+          "moderate_70min": "Moderate 70min",
+          "quick_10min": "Quick 10min",
+          "quick_15min": "Quick 15min",
+          "quick_25min": "Quick 25min",
+          "quick_5min": "Quick 5min",
+          "quick_open_disabled": "Quick open disabled",
+          "slow_80min": "Slow 80min"
+        }
       },
       "smart_fan_led_display_levels": {
-        "name": "Smart fan LED display levels"
+        "name": "Smart fan LED display levels",
+        "state": {
+          "adaptive": "Adaptive",
+          "grade_1": "Grade 1",
+          "grade_2": "Grade 2",
+          "grade_3": "Grade 3",
+          "grade_4": "Grade 4",
+          "grade_5": "Grade 5",
+          "grade_6": "Grade 6",
+          "grade_7": "Grade 7",
+          "grade_8": "Grade 8",
+          "grade_9": "Grade 9",
+          "vzm31sn": "Vzm31sn"
+        }
       },
       "speed": {
         "name": "Speed"
       },
       "start_up_on_off": {
-        "name": "Power-on behavior"
+        "name": "Power-on behavior",
+        "state": {
+          "off": "Off",
+          "on": "On",
+          "previous": "Previous",
+          "previousvalue": "Previous value",
+          "toggle": "Toggle"
+        }
       },
       "status_indication": {
         "name": "Status indication"
@@ -1403,10 +1567,25 @@
         "name": "Switch indication"
       },
       "switch_mode": {
-        "name": "Switch mode"
+        "name": "Switch mode",
+        "state": {
+          "dry": "Dry",
+          "power": "Power",
+          "pulse": "Pulse"
+        }
       },
       "switch_type": {
-        "name": "Switch type"
+        "name": "Switch type",
+        "state": {
+          "load_only": "Load only",
+          "momentary": "Momentary",
+          "noswitch": "No switch",
+          "single_pole": "Single pole",
+          "single_pole_full_sine": "Single pole full sine",
+          "three_way_aux": "Three way aux",
+          "three_way_dumb": "Three way dumb",
+          "toggle": "Toggle"
+        }
       },
       "switch_type_l1": {
         "name": "Switch type L1"
@@ -1424,13 +1603,21 @@
         "name": "Thermostat mode"
       },
       "valve_orientation": {
-        "name": "Valve orientation"
+        "name": "Valve orientation",
+        "state": {
+          "horizontal": "Horizontal",
+          "vertical": "Vertical"
+        }
       },
       "valve_status_led": {
         "name": "Valve status LED"
       },
       "viewing_direction": {
-        "name": "Viewing direction"
+        "name": "Viewing direction",
+        "state": {
+          "default": "Default",
+          "inverted": "Inverted"
+        }
       },
       "weather_delay": {
         "name": "Weather delay"
@@ -1576,7 +1763,13 @@
         "name": "Heating demand"
       },
       "hooks_state": {
-        "name": "Hooks state"
+        "name": "Hooks state",
+        "state": {
+          "locked": "Locked",
+          "locking": "Locking",
+          "unlocked": "Unlocked",
+          "unlocking": "Unlocking"
+        }
       },
       "human_motion_state": {
         "name": "Human motion state"
@@ -1632,10 +1825,18 @@
         "name": "Last feeding size"
       },
       "last_feeding_source": {
-        "name": "Last feeding source"
+        "name": "Last feeding source",
+        "state": {
+          "feeder": "Feeder",
+          "homeassistant": "Home assistant"
+        }
       },
       "last_illumination_state": {
-        "name": "Last illumination state"
+        "name": "Last illumination state",
+        "state": {
+          "dark": "Dark",
+          "light": "Light"
+        }
       },
       "last_pin_code": {
         "name": "Last PIN code"
@@ -1689,7 +1890,14 @@
         "name": "Motor stepcount"
       },
       "open_window_detected": {
-        "name": "Open window detected"
+        "name": "Open window detected",
+        "state": {
+          "closed": "Closed",
+          "external": "External",
+          "maybe": "Maybe",
+          "open": "Open",
+          "quarantine": "Quarantine"
+        }
       },
       "opening": {
         "name": "Opening"
@@ -1698,7 +1906,11 @@
         "name": "Operating mode"
       },
       "overheated": {
-        "name": "Overheat protection"
+        "name": "Overheat protection",
+        "state": {
+          "normal": "Normal",
+          "overheated": "Overheated"
+        }
       },
       "pi_heating_demand": {
         "name": "Pi heating demand"
@@ -1713,7 +1925,16 @@
         "name": "Power factor phase C"
       },
       "power_source": {
-        "name": "Power source"
+        "name": "Power source",
+        "state": {
+          "battery": "Battery",
+          "dc_source": "Dc source",
+          "emergency_mains_always_on": "Emergency mains always on",
+          "emergency_mains_transfer_switch": "Emergency mains transfer switch",
+          "mains_single_phase": "Mains single phase",
+          "mains_three_phase": "Mains three phase",
+          "unknown": "Unknown"
+        }
       },
       "power_type": {
         "name": "Power type"
@@ -1755,7 +1976,12 @@
         "name": "Self-test result"
       },
       "setpoint_change_source": {
-        "name": "Setpoint change source"
+        "name": "Setpoint change source",
+        "state": {
+          "external": "External",
+          "manual": "Manual",
+          "schedule": "Schedule"
+        }
       },
       "single_watering_amount": {
         "name": "Single watering amount"
@@ -1902,7 +2128,19 @@
         "name": "Weight dispensed today"
       },
       "window_covering_type": {
-        "name": "Window covering type"
+        "name": "Window covering type",
+        "state": {
+          "awning": "Awning",
+          "drapery": "Drapery",
+          "projector_screen": "Projector screen",
+          "rollershade": "Rollershade",
+          "rollershade_exterior": "Rollershade exterior",
+          "rollershade_exterior_two_motors": "Rollershade exterior two motors",
+          "rollershade_two_motors": "Rollershade two motors",
+          "shutter": "Shutter",
+          "tilt_blind_tilt_and_lift": "Tilt blind tilt and lift",
+          "tilt_blind_tilt_only": "Tilt blind tilt only"
+        }
       },
       "work_mode": {
         "name": "Work mode"
