@@ -1,4 +1,5 @@
 {
+  "rollbackPrs": false,
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
 
@@ -240,6 +241,12 @@
       "matchPackageNames": ["ghcr.io/alexxit/go2rtc"],
       "groupName": "go2rtc",
       "groupSlug": "go2rtc"
+    },
+    {
+      "description": "Tout ce qui monte se fusionne seul quand la CI est verte (opérateur, 2026-10-14)",
+      "matchUpdateTypes": ["minor", "major"],
+      "automerge": true,
+      "platformAutomerge": true
     }
   ]
 }
