@@ -1,7 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-
+  "extends": [
+    "config:recommended"
+  ],
   "enabledManagers": [
     "pep621",
     "pip_requirements",
@@ -10,67 +11,71 @@
     "custom.regex",
     "homeassistant-manifest"
   ],
-
   "pre-commit": {
     "enabled": true
   },
-
   "pip_requirements": {
     "managerFilePatterns": [
       "/(^|/)requirements[\\w_-]*\\.txt$/",
       "/(^|/)homeassistant/package_constraints\\.txt$/"
     ]
   },
-
   "dockerfile": {
-    "managerFilePatterns": ["/^Dockerfile$/"]
+    "managerFilePatterns": [
+      "/^Dockerfile$/"
+    ]
   },
-
   "homeassistant-manifest": {
     "managerFilePatterns": [
       "/^homeassistant/components/[^/]+/manifest\\.json$/"
     ]
   },
-
   "customManagers": [
     {
       "customType": "regex",
       "description": "Update ruff required-version in pyproject.toml",
-      "managerFilePatterns": ["/^pyproject\\.toml$/"],
-      "matchStrings": ["required-version = \">=(?<currentValue>[\\d.]+)\""],
+      "managerFilePatterns": [
+        "/^pyproject\\.toml$/"
+      ],
+      "matchStrings": [
+        "required-version = \">=(?<currentValue>[\\d.]+)\""
+      ],
       "depNameTemplate": "ruff",
       "datasourceTemplate": "pypi"
     },
     {
       "customType": "regex",
       "description": "Update go2rtc RECOMMENDED_VERSION in const.py alongside the Dockerfile pin",
-      "managerFilePatterns": ["/^homeassistant/components/go2rtc/const\\.py$/"],
-      "matchStrings": ["RECOMMENDED_VERSION = \"(?<currentValue>[\\d.]+)\""],
+      "managerFilePatterns": [
+        "/^homeassistant/components/go2rtc/const\\.py$/"
+      ],
+      "matchStrings": [
+        "RECOMMENDED_VERSION = \"(?<currentValue>[\\d.]+)\""
+      ],
       "depNameTemplate": "ghcr.io/alexxit/go2rtc",
       "datasourceTemplate": "docker"
     }
   ],
-
   "minimumReleaseAge": "7 days",
   "prConcurrentLimit": 10,
   "prHourlyLimit": 2,
-  "schedule": ["before 6am"],
-
+  "schedule": [
+    "before 6am"
+  ],
   "semanticCommits": "disabled",
   "commitMessageAction": "Update",
   "commitMessageTopic": "{{depName}}",
   "commitMessageExtra": "to {{newVersion}}",
-
   "automerge": false,
-
   "vulnerabilityAlerts": {
     "enabled": false
   },
-
   "packageRules": [
     {
-      "description": "Deny all by default — allowlist below re-enables specific packages",
-      "matchPackageNames": ["*"],
+      "description": "Deny all by default \u2014 allowlist below re-enables specific packages",
+      "matchPackageNames": [
+        "*"
+      ],
       "enabled": false
     },
     {
@@ -101,7 +106,10 @@
         "zeroconf"
       ],
       "enabled": true,
-      "labels": ["dependency", "core"]
+      "labels": [
+        "dependency",
+        "core"
+      ]
     },
     {
       "description": "Common Python utilities (allowlisted)",
@@ -133,7 +141,9 @@
         "xmltodict"
       ],
       "enabled": true,
-      "labels": ["dependency"]
+      "labels": [
+        "dependency"
+      ]
     },
     {
       "description": "Home Assistant ecosystem packages (core-maintained, no cooldown)",
@@ -147,7 +157,10 @@
       ],
       "enabled": true,
       "minimumReleaseAge": null,
-      "labels": ["dependency", "core"]
+      "labels": [
+        "dependency",
+        "core"
+      ]
     },
     {
       "description": "Test dependencies (allowlisted)",
@@ -178,14 +191,22 @@
         "zizmor"
       ],
       "enabled": true,
-      "labels": ["dependency"]
+      "labels": [
+        "dependency"
+      ]
     },
     {
       "description": "For types-* stubs, only allow patch updates. Major/minor bumps track the upstream runtime package version and must be manually coordinated with the corresponding pin.",
-      "matchPackageNames": ["/^types-/"],
-      "matchUpdateTypes": ["patch"],
+      "matchPackageNames": [
+        "/^types-/"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "enabled": true,
-      "labels": ["dependency"]
+      "labels": [
+        "dependency"
+      ]
     },
     {
       "description": "Pre-commit hook repos (allowlisted, matched by owner/repo)",
@@ -196,50 +217,83 @@
         "zizmorcore/zizmor-pre-commit"
       ],
       "enabled": true,
-      "labels": ["dependency"]
+      "labels": [
+        "dependency"
+      ]
     },
     {
       "description": "Docker allowlist (ghcr.io exposes no release timestamps so the global cooldown needs to be bypassed)",
-      "matchPackageNames": ["ghcr.io/alexxit/go2rtc"],
+      "matchPackageNames": [
+        "ghcr.io/alexxit/go2rtc"
+      ],
       "enabled": true,
       "minimumReleaseAge": null,
-      "labels": ["dependency"]
+      "labels": [
+        "dependency"
+      ]
     },
     {
       "description": "Group ruff pre-commit hook with its PyPI twin into one PR",
-      "matchPackageNames": ["astral-sh/ruff-pre-commit", "ruff"],
+      "matchPackageNames": [
+        "astral-sh/ruff-pre-commit",
+        "ruff"
+      ],
       "groupName": "ruff",
       "groupSlug": "ruff"
     },
     {
       "description": "Group codespell pre-commit hook with its PyPI twin into one PR",
-      "matchPackageNames": ["codespell-project/codespell", "codespell"],
+      "matchPackageNames": [
+        "codespell-project/codespell",
+        "codespell"
+      ],
       "groupName": "codespell",
       "groupSlug": "codespell"
     },
     {
       "description": "Group yamllint pre-commit hook with its PyPI twin into one PR",
-      "matchPackageNames": ["adrienverge/yamllint", "yamllint"],
+      "matchPackageNames": [
+        "adrienverge/yamllint",
+        "yamllint"
+      ],
       "groupName": "yamllint",
       "groupSlug": "yamllint"
     },
     {
       "description": "Group zizmor pre-commit hook with its PyPI twin into one PR",
-      "matchPackageNames": ["zizmorcore/zizmor-pre-commit", "zizmor"],
+      "matchPackageNames": [
+        "zizmorcore/zizmor-pre-commit",
+        "zizmor"
+      ],
       "groupName": "zizmor",
       "groupSlug": "zizmor"
     },
     {
       "description": "Group pylint with astroid (their versions are linked and must move together)",
-      "matchPackageNames": ["pylint", "astroid"],
+      "matchPackageNames": [
+        "pylint",
+        "astroid"
+      ],
       "groupName": "pylint",
       "groupSlug": "pylint"
     },
     {
       "description": "Group go2rtc Dockerfile pin with const.py RECOMMENDED_VERSION into one PR",
-      "matchPackageNames": ["ghcr.io/alexxit/go2rtc"],
+      "matchPackageNames": [
+        "ghcr.io/alexxit/go2rtc"
+      ],
       "groupName": "go2rtc",
       "groupSlug": "go2rtc"
+    },
+    {
+      "description": "Tout ce qui monte se fusionne seul quand la CI est verte (op\u00e9rateur, 2026-10-14)",
+      "matchUpdateTypes": [
+        "minor",
+        "major"
+      ],
+      "automerge": true,
+      "platformAutomerge": true
     }
-  ]
+  ],
+  "rollbackPrs": false
 }
